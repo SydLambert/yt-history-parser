@@ -45,4 +45,4 @@ channels=channels.map(e=>({name:e,views:views.filter(v=>v.channelName==e).length
 channels.sort((a,b)=>b.views-a.views);
 channels=channels.slice(0,30);
 let maxNameLength=channels.reduce((a,e)=>Math.max(a,e.name.length),0);
-console.log(channels.map(e=>`\t${e.name+" ".repeat(maxNameLength-e.name.length)} - ${e.views} videos watched`).join("\n"))
+console.log(channels.map(e=>`\t${e.name+" ".repeat(maxNameLength-e.name.length)} - viewed ${e.views} times`).join("\n"))

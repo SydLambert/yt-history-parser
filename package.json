@@ -1,12 +1,12 @@
 {
   "name": "most-viewed",
   "version": "1.0.0",
-  "description": "",
+  "description": "Parse Youtube watch history into simple JS objects",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
-  "author": "",
+  "author": "Syd Lambert",
   "license": "ISC",
   "dependencies": {
     "jsdom": "^13.1.0"
