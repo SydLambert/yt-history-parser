@@ -1,5 +1,5 @@
-# yt-history-parser
-Parses Youtube watch history into manageable JS objects. By default lets you see your most viewed videos and the channels you viewed the most videos from. Very easy to modify and find out some interesting statistics.
+# Youtube history parser
+Parses Youtube watch history into manageable JS objects. By default lets you see your most viewed videos and the channels you viewed the most videos from. Very easy to modify to find out more interesting statistics.
 
 ## How to use
 ### Prerequisites
