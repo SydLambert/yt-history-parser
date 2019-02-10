@@ -30,11 +30,19 @@ views.forEach((e,i)=>
 	views[i]["display"]=`Title: ${e.videoTitle}\nChannel: ${e.channelName}\nLink: ${e.videoLink}`
 );
 
-console.log("Top 10 most viewed: ");
+console.log("Top 20 most viewed videos:");
 let videoIds=views.map(e=>e.videoId);
 videoIds=[...new Set(videoIds)].map(e=>({
 	videoId:e,
 	views:videoIds.filter(t=>t==e).length
 }));
 videoIds.sort((a,b)=>b.views-a.views);
-console.log(videoIds.slice(0,100).map(e=>views.find(v=>v.videoId==e.videoId).display+`\nViews: ${e.views}\n`).join("\n"));
+console.log(videoIds.slice(0,20).map(e=>views.find(v=>v.videoId==e.videoId).display+`\nViews: ${e.views}\n`).join("\n"));
+
+console.log("Top 30 most viewed channels:")
+let channels=[...new Set(views.map(e=>e.channelName))];
+channels=channels.map(e=>({name:e,views:views.filter(v=>v.channelName==e).length}));
+channels.sort((a,b)=>b.views-a.views);
+channels=channels.slice(0,30);
+let maxNameLength=channels.reduce((a,e)=>Math.max(a,e.name.length),0);
+console.log(channels.map(e=>`\t${e.name+" ".repeat(maxNameLength-e.name.length)} - ${e.views} videos watched`).join("\n"))
