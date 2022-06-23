@@ -9,6 +9,6 @@
   "author": "Syd Lambert",
   "license": "ISC",
   "dependencies": {
-    "jsdom": "^13.1.0"
+    "jsdom": "^16.5.0"
   }
 }
